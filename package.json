@@ -4,7 +4,6 @@
   "description": "A place to practice Jest Testing",
   "main": "index.js",
   "dependencies": {
-    "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
@@ -19,12 +18,15 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/webpack": "^4.41.26",
+    "concurrently": "^5.3.0",
     "dotenv-webpack": "^6.0.0",
-    "html-webpack-plugin": "^4.5.1"
+    "html-webpack-plugin": "^4.5.1",
+    "jest": "^26.6.3"
   },
   "scripts": {
     "start": "nodemon server/index.js",
     "dev": "webpack --mode development --watch",
+    "start-dev": "concurrently \"nodemon server/index.js\" \"webpack --mode development --watch\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

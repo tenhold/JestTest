@@ -100,13 +100,23 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
+/***/ "./data/sum.ts":
+/*!*********************!*\
+  !*** ./data/sum.ts ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"sum\": () => (/* binding */ sum)\n/* harmony export */ });\nvar sum = function (a, b) {\n    return a + b;\n};\n\n\n//# sourceURL=webpack://JestTest/./data/sum.ts?");
+
+/***/ }),
+
 /***/ "./src/App.tsx":
 /*!*********************!*\
   !*** ./src/App.tsx ***!
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar App = function () {\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h1\", null, \"Hello World!\")));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n\n//# sourceURL=webpack://JestTest/./src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _data_sum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/sum */ \"./data/sum.ts\");\n\n\nvar App = function () {\n    var _a = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0), num = _a[0], setNum = _a[1];\n    var _b = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0), num2 = _b[0], setNum2 = _b[1];\n    var _c = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null), sumIt = _c[0], setSum = _c[1];\n    var handleInput = function () {\n        setSum((0,_data_sum__WEBPACK_IMPORTED_MODULE_1__.sum)(num, num2));\n    };\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h1\", null, \"Hello World!\"),\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null,\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { type: 'text', onChange: function (e) { return setNum(JSON.parse(e.target.value)); } }),\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { type: 'text', onChange: function (e) { return setNum2(JSON.parse(e.target.value)); } }),\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", { onClick: handleInput }, \"get sum\")),\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h1\", null, sumIt)));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n\n//# sourceURL=webpack://JestTest/./src/App.tsx?");
 
 /***/ }),
 
